@@ -5,8 +5,10 @@ body {
     height: 100%;
     background: #ffffff;
     height: auto;
+    /* overflow-x: hidden; */
     font-family: "PT Serif", sans-serif;
     color: black;
+    margin-top: green 10px
 }
 
 #title {
@@ -47,15 +49,12 @@ body {
     text-align: left;
 }
 
-.image img {
-    /* display: flex; */
-}
-
-.image_region {
-    margin-left: 1%;
-    margin-right: 500px;
-    border-right: 2px gray solid;
-}
+/* #right_div {
+    display: inline-block;
+    margin-left: 50%;
+    margin-right: 50%;
+    border-right: 10px gray solid;
+}*/
 
 .images-container {
     display: block;
@@ -76,7 +75,7 @@ body {
 
 .images-container .description {
     padding-left: 2%;
-    z-index: 10;
+    z-index: 11;
     /* position: relative; */
     margin: 10px;
     /* border: 10px; */
