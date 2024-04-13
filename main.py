@@ -34,12 +34,15 @@ def get_headline(prompt=""):
     #--- IMPLEMENT ME ---#
     #nanoGPT.get_headline()
     # return a default value because we don't have this implemented yet
+    #prompt is just "starter prompt"
     return prompt+" nobody In Entire Dodgers Organization Has Heart To Tell Ohtani What Going On With Interpreter"
 
 def get_paragraph(headline):
+    #uses gpt.py
     return get_text_from_headline(headline, False)
 
 def get_image():
+    #idk
     return "PRETEND THIS IS BASE64"
 
 def main():
