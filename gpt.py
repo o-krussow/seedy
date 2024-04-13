@@ -29,7 +29,6 @@ def get_text_from_headline(headline, no_api_call = False):
         return "LOS ANGELES—Admitting that they were all just too embarrassed to come out and say it, sources confirmed Wednesday that nobody in the entire Dodgers organization has the heart to tell Shohei Ohtani what’s going on with his interpreter. “It’s gotten to the point where we all just kind of look at each other and hope someone else will deal with it,” said manager Dave Roberts, adding that Ohtani has been showing up to games and press conferences with a man who is clearly not his interpreter but instead just someone he met on the street. “We know it’s not our place to tell him, but it’s getting more and more awkward every day. We’re all just hoping he figures it out on his own.”"
     else:
         client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
-        print(f"One paragraph The Onion article body text only from headline {headline}")
         chat = client.chat.completions.create(
                 messages=[
                     {

@@ -27,9 +27,11 @@ import base64
 from gpt import get_text_from_headline
 
 #--- IMPLEMENT ME ---#
-from sd import make_image_from_headline
+from dalle import make_image_from_headline
 #from nanoGPT import get_headline
 
+"""returns the headline given from nanoGPT as a string
+@param prompt is a string representing the prompt to nanoGPT"""
 def get_headline(prompt=""):
     #--- IMPLEMENT ME ---#
     #nanoGPT.get_headline()
@@ -37,33 +39,27 @@ def get_headline(prompt=""):
     #prompt is just "starter prompt"
     return prompt+" nobody In Entire Dodgers Organization Has Heart To Tell Ohtani What Going On With Interpreter"
 
-def get_paragraph(headline):
+def get_paragraph(headline, no_api_call = False):
     #uses gpt.py
-    return get_text_from_headline(headline, False)
+    return get_text_from_headline(headline, no_api_call)
 
-def get_image():
-    #idk
-    return "PRETEND THIS IS BASE64"
+"""returns the base64 encoded image string
+@param headline is a string representing the headline of the article"""
+def get_image(headline, no_api_call = False):
+    #uses dalle.py
+
+    # create the image and return the url
+    return make_image_from_headline(headline, no_api_call)
+
 
 def main():
-    # get the headline
+    """test functionality of main.py by running main.py alone"""
     headline = get_headline()
-
-    # create the image
-    image_file_name = "image.jpg"
-    #--- IMPLEMENT ME ---#
-    make_image_from_headline(headline, image_file_name)
-
-    with open(image_file_name, "rb") as image_file:
-        image_data = image_file.read()
-
-    encoded_image = base64.b64encode(image_data).decode("utf-8")
 
     data = {
                 'headline': headline,
-                # eventually, get rid of the True parameter to run the API call
                 'text': get_text_from_headline(headline, True),
-                'image': encoded_image
+                'image': get_image(headline, True),
             }
 
     with open("data.json", 'w') as json_file:
@@ -72,4 +68,3 @@ def main():
 if __name__ == "__main__":
     main()
     
-

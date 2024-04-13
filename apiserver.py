@@ -6,10 +6,10 @@ from main import get_image
 
 app = Flask(__name__)
 
-def get_article(prompt=""):
+def get_article(prompt="", no_api_call=True):
     headline = get_headline(prompt)
-    paragraph = get_paragraph(headline)
-    image = get_image()
+    paragraph = get_paragraph(headline, no_api_call)
+    image = get_image(headline, no_api_call)
     tasks = [
         {
             'headline': headline,
