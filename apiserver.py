@@ -7,11 +7,14 @@ from main import get_image
 app = Flask(__name__)
 
 def get_article(prompt=""):
+    headline = get_headline(prompt)
+    paragraph = get_paragraph(headline)
+    image = get_image()
     tasks = [
         {
-            'headline': get_headline(prompt),
-            'paragraph': get_paragraph(),
-            'image': get_image(),
+            'headline': headline,
+            'paragraph': paragraph,
+            'image': image,
         },
     ]
     return tasks

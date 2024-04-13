@@ -36,8 +36,8 @@ def get_headline(prompt=""):
     # return a default value because we don't have this implemented yet
     return prompt+" nobody In Entire Dodgers Organization Has Heart To Tell Ohtani What Going On With Interpreter"
 
-def get_paragraph():
-    return "FILLER PARAGRAPH"
+def get_paragraph(headline):
+    return get_text_from_headline(headline, False)
 
 def get_image():
     return "PRETEND THIS IS BASE64"
