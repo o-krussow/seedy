@@ -30,11 +30,17 @@ from gpt import get_text_from_headline
 from sd import make_image_from_headline
 #from nanoGPT import get_headline
 
-def get_headline():
+def get_headline(prompt=""):
     #--- IMPLEMENT ME ---#
     #nanoGPT.get_headline()
     # return a default value because we don't have this implemented yet
-    return "Nobody In Entire Dodgers Organization Has Heart To Tell Ohtani What Going On With Interpreter"
+    return prompt+" nobody In Entire Dodgers Organization Has Heart To Tell Ohtani What Going On With Interpreter"
+
+def get_paragraph():
+    return "FILLER PARAGRAPH"
+
+def get_image():
+    return "PRETEND THIS IS BASE64"
 
 def main():
     # get the headline

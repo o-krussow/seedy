@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
-from main import headline_generator
-from main import paragraph_generator
-from main import image_generator
+from main import get_headline
+from main import get_paragraph
+from main import get_image
 
 
 app = Flask(__name__)
@@ -9,9 +9,9 @@ app = Flask(__name__)
 def get_article(prompt=""):
     tasks = [
         {
-            'headline': headline_generator(prompt),
-            'paragraph': paragraph_generator(),
-            'image': image_generator(),
+            'headline': get_headline(prompt),
+            'paragraph': get_paragraph(),
+            'image': get_image(),
         },
     ]
     return tasks
