@@ -8,7 +8,7 @@ body {
     /* overflow-x: hidden; */
     font-family: "PT Serif", sans-serif;
     color: black;
-    margin-top: green 10px
+    /* margin-top: green 10px; */
 }
 
 #title {
@@ -34,7 +34,7 @@ body {
 #title h1 {
     /* display: inline-block; */
     font-size: 40px;
-    z-index: 1;
+    /* z-index: 1; */
     /* justify-content: left; */
     /* word-wrap: break-word; */
     /* width: max-content; */
@@ -49,39 +49,68 @@ body {
     text-align: left;
 }
 
-/* #right_div {
-    display: inline-block;
-    margin-left: 50%;
-    margin-right: 50%;
-    border-right: 10px gray solid;
-}*/
+#right_div {
+    /* display: inline-block; */
+    /* margin-left: 50%; */
+    /* margin-right: 50%; */
+    width: 100%;
+    border-right: 1px lightgray solid;
+}
 
 .images-container {
-    display: block;
-    /* margin-left: 100px; */
+    /* display: inline-block; */
+    /* z-index: 10; */
+    position: absolute;
+
     margin-left: 10%;
     margin-right: auto;
-    width: 50%;
+    width: 70%;
     max-width: 90%;
+
+    /* justify-content: center; */
+    /* align-content: center; */
+
     /* margin-left: auto; */
     /* margin-right: auto; */
     /* display: flex; */
     /* border-right: 2px gray solid; */
+    /* border: 2px red solid; */
+
+    /* display: inline-block; */
+
+    /* max-width: 90%; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    display: flex;
 }
 
-.images-container img {
+.image img {
     width: 100%;
 }
 
 .images-container .description {
     padding-left: 2%;
-    z-index: 11;
+    /* z-index: 11; */
     /* position: relative; */
     margin: 10px;
     /* border: 10px; */
     margin-bottom: 70px;
     font-size: 18px;
     line-height: 35px;
+    /* border: 2px green solid; */
+}
+
+#right_description {
+    padding-left: 2%;
+    /* z-index: 11; */
+    /* position: relative; */
+    margin: 10px;
+    /* border: 10px; */
+    /* margin-bottom: 70px; */
+    /* font-size: 18px; */
+    /* line-height: 35px; */
+    /* border: 2px green solid; */
+    /* justify-content: flex-start; */
 }
 
 .green-bar-wrapper {
