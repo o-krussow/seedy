@@ -39,7 +39,7 @@
         <div>
             <div id="title">
                 <div id="title_text">
-                    <h1>
+                    <h1 id="headline">
                         Local Cat Successfully Negotiates Treaty With Neighbor's Dog Over Backyard
                         <!-- AI Chef Creates World's First Emotionally Intelligent Cupcake -->
                     </h1>
@@ -55,10 +55,9 @@
             <div class="images-container">
                 <div class="image" id="picture">
                     <!-- <img src="main_page_images/meme.jpg" alt="sample picture"> -->
-                    <img
-                        src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-52ATyuOngjXAchaYE38n3Mtv/user-Ci6Pc5yVbUAlV7aqY1Avf8hK/img-9FFzbdKSJ5TAPDEiFGfLWqCA.png?st=2024-04-13T20%3A19%3A55Z&se=2024-04-13T22%3A19%3A55Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-04-13T12%3A09%3A09Z&ske=2024-04-14T12%3A09%3A09Z&sks=b&skv=2021-08-06&sig=6Htp3CqrjKz54j1cmu1be6f26hlkCjvKgBZjyYAx45o%3D">
+                    <img id="article_image">
                     <div class="description">
-                        <p>LOS ANGELES—Admitting that they were all just too embarrassed to come out and say it, sources
+                        <p id="paragraph">LOS ANGELES—Admitting that they were all just too embarrassed to come out and say it, sources
                             confirmed Wednesday that nobody in the entire Dodgers organization has the heart to tell
                             Shohei
                             Ohtani what’s going on with his interpreter. “It’s gotten to the point where we all just
@@ -81,7 +80,23 @@
     </div>
     <!-- <div class="image_container_test"></div> -->
     </div>
-    <script src="api_js.js"></script>
+    <script>
+	const jsonData = JSON.parse(sessionStorage.getItem('jsonData'));
+	const headline_Element = document.getElementById('headline');
+	const image_Element = document.getElementById('article_image');
+	const paragraph_Element = document.getElementById('paragraph');
+	
+	//console.log(jsonData.article[0]);
+	headline_Element.innerHTML = jsonData.article[0].headline;
+
+	//for (var key in jsonData.article){
+	//	console.log("key: " + key);
+	//	console.log("value: " + jsonData.article[key])
+	//}
+	image_Element.src = jsonData.article[0].image;
+	paragraph_Element.innerHTML = jsonData.article[0].paragraph;
+	//console.log(jsonData);
+    </script>
 </body>
 
 </html>

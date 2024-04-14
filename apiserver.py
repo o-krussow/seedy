@@ -1,17 +1,27 @@
 from flask import Flask, request, jsonify
-from main import get_paragraph
+from main import get_paragraph, get_image_url
 from nanoGPT import nanoGPT
 import time
 
 app = Flask(__name__)
 
 def get_article(prompt=""):
-    #headline = get_headline(prompt)
     headline = gpt.generate()
-    paragraph = get_paragraph(headline)
+    good_request = False
+    while not good_request:
+        try:
+            print("Getting a paragraph and image")
+            paragraph = get_paragraph(headline)
+            image_url = get_image_url(headline)
+            good_request = True
+        except Exception as e:
+            print(f"OpenAI Bad Request Error: {e}")
+            print("Trying again...")
+
     tasks = [
         {
             'headline': headline,
+            'image': image_url,
             'paragraph': paragraph,
         },
     ]

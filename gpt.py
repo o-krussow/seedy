@@ -33,10 +33,10 @@ def get_text_from_headline(headline, no_api_call = False):
                 messages=[
                     {
                         "role": "system",
-                        "content": f"One paragraph The Onion article body text only from headline {headline}"
+                        "content": f"One paragraph The Onion article body text only from headline {headline}. Make sure it's funny!"
                     }
                 ],
-                max_tokens=150,
+                max_tokens=250,
                 temperature=.7,
                 n=1,
                 stop=None,

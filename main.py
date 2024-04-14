@@ -40,7 +40,10 @@ from dalle import make_image_from_headline
 
 def get_paragraph(headline, no_api_call = False):
     #uses gpt.py
-    return get_text_from_headline(headline, True)
+    return get_text_from_headline(headline, no_api_call)
+
+def get_image_url(headline, no_api_call = False):
+    return make_image_from_headline(headline, no_api_call)
 
 
 def main():

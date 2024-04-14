@@ -34,6 +34,35 @@
         </div>
     </div>
     <!-- Real news 1k away wants to be read by you -->
+
+    <script>
+        // Function to initiate API call
+        function fetchData() {
+            const apiUrl = 'http://localhost:5000/api'; // Replace with your API URL
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {	
+		    // store the JSON data in sessionStorage
+          	    sessionStorage.setItem('jsonData', JSON.stringify(data));
+		    // Redirect to seedy.html
+		    window.location.href = 'seedy.html';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        // Call the fetchData function when the page loads
+        window.onload = fetchData;
+	
+	
+    </script>
+
 </body>
 
 </html>
