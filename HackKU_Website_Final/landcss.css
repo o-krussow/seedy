@@ -1,0 +1,109 @@
+html {
+    border-top: 10px #2d693f solid;
+    position: relative;
+    /* bottom: 100; */
+    /* right: 100; */
+    margin: -7px 0 -50px 0;
+}
+
+header {
+    /* border-top: 10px #2d693f solid; */
+}
+
+footer {
+    /* border-bottom: 10px #2d693f solid; */
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    height: auto;
+
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    font-family: "PT Serif", sans-serif;
+    color: black;
+
+    /* border-top: 10px black solid; */
+    /* border-top: 10px #2d693f solid; */
+    /* border: 10px #2d693f solid; */
+
+    /* position: absolute;
+    top: -10;
+    left: 1000; */
+
+    border-top: 10px #2d693f solid;
+    border-bottom: 15px #2d693f solid;
+}
+
+#page_wrapper {
+    /* width: 100%; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* margin-left: 50%; */
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+
+    /* margin-bottom: 100; */
+    /* border-bottom: 10px #2d693f solid; */
+}
+
+#vertical_wrapper {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+
+#img {
+    /* position: relative; */
+    /* margin-left: 50%; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* font-size: 40px; */
+    /* padding-left: 10%; */
+    /* width: 70%; */
+    /* text-align: left; */
+    /* margin: 50%; */
+    /* width: 50px; */
+    /* margin-left: 50%; */
+    /* height: 50%; */
+    /* margin: 0; */
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    flex-grow: 2;
+    position: left;
+    margin-top: 10;
+
+    /* border-left: 10px #2d693f solid; */
+}
+
+#text {
+    /* justify-content: center; */
+    justify-content: right;
+    align-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* flex-grow: 2; */
+}
+
+h1 {
+    /* margin-left: 10%; */
+    /* margin-right: auto; */
+    /* margin-right: 70%; */
+    /* justify-content: center; */
+    text-align: justify;
+    text-align-last: center;
+    /* border: 2px black solid; */
+}
+
+img {
+    /* border: 2px black solid; */
+    width: 110%;
+}
