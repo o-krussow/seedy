@@ -19,7 +19,9 @@ def get_article(prompt=""):
 
 @app.route('/api', methods=['GET'])
 def get_article_without_input():
-    return jsonify({'article': get_article()})
+    response = jsonify({'article': get_article()})
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    return response
 
 @app.route('/api', methods=['POST'])
 def get_article_with_input():
