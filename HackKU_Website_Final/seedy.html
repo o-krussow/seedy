@@ -33,7 +33,8 @@
         <div id="top_row_of_stuff">
             <img src="main_page_images/seedy_logo.png" width="300px">
             <div id="reload_article_button_div">
-                <button id="reload_article_button" onclick="location.href = 'land.html';">SEE ANOTHER</button>
+                <a href="land.html"><img id="reload_article_button" src="reseed.gif"></a>
+                <!-- <button id="reload_article_button" onclick="location.href = 'land.html';">SEE ANOTHER</button> -->
             </div>
         </div>
         <div>
@@ -57,7 +58,8 @@
                     <!-- <img src="main_page_images/meme.jpg" alt="sample picture"> -->
                     <img id="article_image">
                     <div class="description">
-                        <p id="paragraph">LOS ANGELES—Admitting that they were all just too embarrassed to come out and say it, sources
+                        <p id="paragraph">LOS ANGELES—Admitting that they were all just too embarrassed to come out and
+                            say it, sources
                             confirmed Wednesday that nobody in the entire Dodgers organization has the heart to tell
                             Shohei
                             Ohtani what’s going on with his interpreter. “It’s gotten to the point where we all just
@@ -81,21 +83,21 @@
     <!-- <div class="image_container_test"></div> -->
     </div>
     <script>
-	const jsonData = JSON.parse(sessionStorage.getItem('jsonData'));
-	const headline_Element = document.getElementById('headline');
-	const image_Element = document.getElementById('article_image');
-	const paragraph_Element = document.getElementById('paragraph');
-	
-	//console.log(jsonData.article[0]);
-	headline_Element.innerHTML = jsonData.article[0].headline;
+        const jsonData = JSON.parse(sessionStorage.getItem('jsonData'));
+        const headline_Element = document.getElementById('headline');
+        const image_Element = document.getElementById('article_image');
+        const paragraph_Element = document.getElementById('paragraph');
 
-	//for (var key in jsonData.article){
-	//	console.log("key: " + key);
-	//	console.log("value: " + jsonData.article[key])
-	//}
-	image_Element.src = jsonData.article[0].image;
-	paragraph_Element.innerHTML = jsonData.article[0].paragraph;
-	//console.log(jsonData);
+        //console.log(jsonData.article[0]);
+        headline_Element.innerHTML = jsonData.article[0].headline;
+
+        //for (var key in jsonData.article){
+        //	console.log("key: " + key);
+        //	console.log("value: " + jsonData.article[key])
+        //}
+        image_Element.src = jsonData.article[0].image;
+        paragraph_Element.innerHTML = jsonData.article[0].paragraph;
+        //console.log(jsonData);
     </script>
 </body>
 
