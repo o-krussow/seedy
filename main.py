@@ -30,26 +30,17 @@ from gpt import get_text_from_headline
 from dalle import make_image_from_headline
 #from nanoGPT import get_headline
 
-"""returns the headline given from nanoGPT as a string
-@param prompt is a string representing the prompt to nanoGPT"""
-def get_headline(prompt=""):
-    #--- IMPLEMENT ME ---#
-    #nanoGPT.get_headline()
-    # return a default value because we don't have this implemented yet
-    #prompt is just "starter prompt"
-    return prompt+" nobody In Entire Dodgers Organization Has Heart To Tell Ohtani What Going On With Interpreter"
+#This seemed to be easier to just implement directly in apiserver. It's fine I guess.
+#def get_headline(prompt=""):
+#    #--- IMPLEMENT ME ---#
+#    #nanoGPT.get_headline()
+#    # return a default value because we don't have this implemented yet
+#    #prompt is just "starter prompt"
+#    return prompt+" nobody In Entire Dodgers Organization Has Heart To Tell Ohtani What Going On With Interpreter"
 
 def get_paragraph(headline, no_api_call = False):
     #uses gpt.py
-    return get_text_from_headline(headline, no_api_call)
-
-"""returns the base64 encoded image string
-@param headline is a string representing the headline of the article"""
-def get_image(headline, no_api_call = False):
-    #uses dalle.py
-
-    # create the image and return the url
-    return make_image_from_headline(headline, no_api_call)
+    return get_text_from_headline(headline, True)
 
 
 def main():

@@ -1,20 +1,19 @@
 from flask import Flask, request, jsonify
 from main import get_headline
 from main import get_paragraph
-from main import get_image
-
+from nanoGPT import nanoGPT
+import time
 
 app = Flask(__name__)
 
-def get_article(prompt="", no_api_call=True):
-    headline = get_headline(prompt)
-    paragraph = get_paragraph(headline, no_api_call)
-    image = get_image(headline, no_api_call)
+def get_article(prompt=""):
+    #headline = get_headline(prompt)
+    headline = gpt.generate()
+    paragraph = get_paragraph(headline)
     tasks = [
         {
             'headline': headline,
             'paragraph': paragraph,
-            'image': image,
         },
     ]
     return tasks
@@ -36,5 +35,11 @@ def get_article_with_input():
     return {"error": "Request must be JSON"}, 415
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    
+    gpt = nanoGPT()
+
+    #while True:
+    #    time.sleep(10)
+
+    app.run(debug=False)
 
