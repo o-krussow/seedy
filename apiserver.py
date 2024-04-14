@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify
-from main import get_headline
 from main import get_paragraph
 from nanoGPT import nanoGPT
 import time
