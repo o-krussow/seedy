@@ -77,5 +77,7 @@ Serving HTTP on 0.0.0.0 port 8011 (http://0.0.0.0:8011/) ...
 ```
 Where 8011 can be replaced by the port you want the web server running on. Obviously we don't need to use python's built in web server, we can use any web server pointed at the right place (mostly), but the python one is convenient.
 To access the web server and apiserver from another computer, we need to use SSH forwarding because there are (multiple) firewalls between where we're connecting from (KU WiFi) to the GPU server. This example command tells SSH to listen on localhost ports 5000 and 8011 and forward traffic to/from these ports to ports 5000 (apiserver) and 8011 (example python webserver referenced above serving HTML) on the GPU server.
+
 ```ssh -L 8011:localhost:8011 -L 5000:localhost:5000 <username>@<serverip>```
+
 Once you've run this command, you can access ```http://localhost:8011/``` in your browser. Since we also forwarded port 5000, the javascript running in your web browser will be able to communicate with our apiserver at ```http://localhost:5000/api/```.
