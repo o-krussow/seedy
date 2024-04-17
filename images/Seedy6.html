@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://localhost:8081/HackKU_Website_Final/seedy.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="description" content="A Hackathon Project">
+    <meta name="author" content="Owen Krussow, David Levy, Chase Horner, Pierce Lane">
+    <meta name="viewport" content="width-device-width, minimum-scale=1.0, initial-scale=1.0">
+    <title>Seedy</title>
+    <link rel="icon" type="image/png" href="http://localhost:8081/HackKU_Website_Final/Seedy.png">
+    <link rel="stylesheet" href="./Seedy6_files/seedycss.css">
+    <link href="./Seedy6_files/css2" rel="stylesheet">
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1167.0" data-gr-ext-installed="">
+
+    <div id="page_wrapper">
+        <div class="top-green-bar-wrapper">
+            <div class="green_bar_image" id="bar">
+                <img src="./Seedy6_files/top_green_bar.png">
+            </div>
+        </div>
+        <div id="top_row_of_stuff">
+            <img src="./Seedy6_files/seedy_logo.png" width="300px">
+            <div id="reload_article_button_div">
+            	<a href="http://localhost:8081/HackKU_Website_Final/land.html"><img id="reload_article_button" src="./Seedy6_files/reseed.gif"></a>
+	    </div>
+        </div>
+        <div>
+            <div id="title">
+                <div id="title_text">
+                    <h1 id="headline">The U.S. Supreme Court will hear arguments in a case that could decide whether the First Amendment protects a Christian baker who refused to make a cake for</h1>
+                </div>
+
+            </div>
+            <div class="green-bar-wrapper">
+                <div class="green_bar_image" id="bar">
+                    <img src="./Seedy6_files/green_bar.png">
+                </div>
+            </div>
+
+            <div class="images-container">
+                <div class="image" id="picture">
+                    <!-- <img src="main_page_images/meme.jpg" alt="sample picture"> -->
+                    <img id="article_image" src="./Seedy6_files/img-D7qdTpT7ua40Hhhq6VllZnWW.png">
+                    <div class="description">
+                        <p id="paragraph">In a groundbreaking case that could have far-reaching implications, the U.S. Supreme Court will hear arguments on whether the First Amendment protects a Christian baker who refused to make a cake for... a gluten-free vegan wedding. The baker, known for his staunch beliefs in traditional baking practices, cited concerns over the purity of his flour and the sanctity of buttercream frosting in his defense. Stay tuned as the fate of frosting and freedom hangs in the balance at the highest court in the land.</p>
+                    </div>
+                </div>
+                <div id="right_div">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="image_container_test"></div> -->
+    
+    <script>
+	const jsonData = JSON.parse(sessionStorage.getItem('jsonData'));
+	const headline_Element = document.getElementById('headline');
+	const image_Element = document.getElementById('article_image');
+	const paragraph_Element = document.getElementById('paragraph');
+	
+	//console.log(jsonData.article[0]);
+	headline_Element.innerHTML = jsonData.article[0].headline;
+
+	//for (var key in jsonData.article){
+	//	console.log("key: " + key);
+	//	console.log("value: " + jsonData.article[key])
+	//}
+	image_Element.src = jsonData.article[0].image;
+	paragraph_Element.innerHTML = jsonData.article[0].paragraph;
+	//console.log(jsonData);
+    </script>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
